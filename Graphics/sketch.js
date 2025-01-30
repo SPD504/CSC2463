@@ -1,48 +1,28 @@
 function setup() {
   createCanvas(600, 400);
-  angleMode(DEGREES); 
 }
 
 function draw() {
-  background(0, 0, 139);
+  background('black');
 
-  push();
-  translate(300, 200);
+  fill(255, 255, 0);
+  noStroke();
+  circle(200, 200, 200);
 
-  circle(0, 0, 200);
-
-  fill(0, 128, 0);
-  circle(0, 0, 190);
-
-  fill(255);
-  beginShape();
-  for (let i = 0; i < 5; i++) {
-    let angle = -90 + (72 * i); 
-    let x = cos(angle) * 100;
-    let y = sin(angle) * 100;
-    vertex(x, y);
-
-    angle += 36;
-    x = cos(angle) * 45;
-    y = sin(angle) * 45;
-    vertex(x, y);
-  }
-  endShape(CLOSE);
+  fill(0);
+  triangle(200, 200, 100, 140, 100, 260);
 
   fill(255, 0, 0);
-  beginShape();
-  for (let i = 0; i < 5; i++) {
-    let angle = -90 + (72 * i); 
-    let x = cos(angle) * 85;
-    let y = sin(angle) * 85;
-    vertex(x, y);
+  noStroke();
+  arc(440, 150, 180, 100, 90, 0);
+  rect(350, 150, 180, 140);
 
-    angle += 36;
-    x = cos(angle) * 35;
-    y = sin(angle) * 35;
-    vertex(x, y);
-  }
-  endShape(CLOSE);
-  pop();
+  fill(255);
+  circle(400, 180, 40);
+  circle(485, 180, 40);
+
+  fill(0, 0, 255);
+  circle(400, 180, 25);
+  circle(485, 180, 25);
 
 }
